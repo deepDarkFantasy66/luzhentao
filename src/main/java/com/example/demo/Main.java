@@ -15,5 +15,11 @@ import java.util.Map;
             System.out.println(user.getAge()); // 输出: 25
             System.out.println(user.getSalary()); // 输出: 50000.0
         }
-    }
+        public static void main(String str) {
+            str = "welcome";
+            int i = 130;
+            byte b = (byte) i;
+            System.out.printf("str = %s, i = %d, b = %d", str, i, b);
+        }
 
+    }
