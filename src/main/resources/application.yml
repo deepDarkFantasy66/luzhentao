@@ -2,4 +2,4 @@ product:
   name: Demo
   author: C3Stones
 server:
-  port: 8888
+  port: 18888
