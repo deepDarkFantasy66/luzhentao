@@ -1,0 +1,5 @@
+docker run -d -p 18848:8848 --name nacos -e MODE=standalone -e MYSQL_SERVICE_HOST=192.168.174.1 -e MYSQL_SERVICE_DB_NAME=nacos -e MYSQL_SERVICE_PORT=13306 -e MYSQL_SERVICE_USER=root -e MYSQL_SERVICE_PASSWORD=Lz199605! -v nacos-data:/home/nacos/data nacos/nacos-server:1.4.1
+
+
+
+ 
