@@ -9,6 +9,7 @@ public class Byql {
      private String sblx;
      private double zcjz;
      private int nf;
+     private int id;
      private  List<Byql> byql;
 
     public Byql() {
