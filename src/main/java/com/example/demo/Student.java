@@ -1,8 +1,9 @@
 package com.example.demo;
 
 import lombok.Data;
+import org.apache.poi.ss.formula.functions.T;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private String name;
     private int age;
     private int math;
@@ -89,5 +90,20 @@ public class Student {
                 ", chinese=" + chinese +
                 ", english=" + english +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(Student student) {
+        System.out.println(this.age+"----"+student.age);
+//        降序排列
+//        return -(this.age-student.age);
+//        升序排列
+        int ageResult = this.age-student.age;
+//        更具年龄做主要排序条件，更具姓名做次要排序条件
+        int nameResult = ageResult==0?this.name.compareTo(student.name):ageResult;
+//       如果年龄，姓名都相同，返回1
+        int result = nameResult==0?1:nameResult;
+        return result;
     }
 }
