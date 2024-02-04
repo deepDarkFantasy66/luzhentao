@@ -17,6 +17,8 @@ public class HashSetDemo2 {
             hashSet.add(new Student("张三", 33, 100, 100, 100));
             hashSet.add(new Student("李四", 53, 100, 100, 100));
             hashSet.add(new Student("王五", 21, 100, 100, 100));
+//            计算hash值存入链表的位置，先计算hashCode的值，然后计算hashcode的值向左移动16位取异或，最后取模余16
+            System.out.println(("a".hashCode()^("a".hashCode()>>>16)) % 16);
         } catch (StudentException e) {
             throw new RuntimeException(e);
         }
