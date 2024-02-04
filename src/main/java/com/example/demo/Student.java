@@ -3,6 +3,8 @@ package com.example.demo;
 import lombok.Data;
 import org.apache.poi.ss.formula.functions.T;
 
+import java.util.Objects;
+
 public class Student implements Comparable<Student>{
     private String name;
     private int age;
@@ -105,5 +107,18 @@ public class Student implements Comparable<Student>{
 //       如果年龄，姓名都相同，返回1
         int result = nameResult==0?1:nameResult;
         return result;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return age == student.age && math == student.math && chinese == student.chinese && english == student.english && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, math, chinese, english);
     }
 }
