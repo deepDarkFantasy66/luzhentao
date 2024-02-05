@@ -97,7 +97,7 @@ public class Student implements Comparable<Student>{
 
     @Override
     public int compareTo(Student student) {
-        System.out.println(this.age+"----"+student.age);
+//        System.out.println(this.age+"----"+student.age);
 //        降序排列
 //        return -(this.age-student.age);
 //        升序排列
