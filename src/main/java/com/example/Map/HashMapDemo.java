@@ -32,6 +32,37 @@ public class HashMapDemo {
 //        判断map中是否包含某个key或者value
         System.out.println(map.containsKey("b"));
         System.out.println(map.containsValue("a"));
+//        extracted(map);
+//        extracted1(map);
+        extracted2(map);
+    }
+
+    /**
+     * 遍历map中的所有键值对
+     * @param map
+     */
+    private static void extracted2(HashMap<String, String> map) {
+        map.forEach((k, v) -> System.out.println(k + "----" + v));
+    }
+
+    /**
+     * 遍历map中的所有键值对
+     * @param map
+     */
+    private static void extracted1(HashMap<String, String> map) {
+        //        获取map中的所有键值对
+        Set<Map.Entry<String, String>> entries = map.entrySet();
+        for (Map.Entry<String, String> entry : entries) {
+            System.out.println(entry.getKey() + "----" + entry.getValue());
+        }
+    }
+
+    /**
+     * 遍历map中的所有key或者value
+     * @param map
+     */
+    private static void extracted(HashMap<String, String> map) {
+        //        获取map中的所有key或者value
         Set<String> strings = map.keySet();
         for (String string : strings) {
             System.out.println(map.get(string));
