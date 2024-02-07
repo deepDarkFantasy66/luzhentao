@@ -46,6 +46,7 @@ public class TestDemo2 {
                     e.printStackTrace();
                 }
             } else {
+//                如果是文件夹，递归调用
                 copyDir(file, newDir);
             }
         }
