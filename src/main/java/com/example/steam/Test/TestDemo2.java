@@ -12,6 +12,10 @@ public class TestDemo2 {
     public static void main(String[] args) {
         File src = new File("D:\\aaa");
         File dest = new File("D:\\bbb");
+        if (src.equals(dest)) {
+            System.out.println("文件夹不能拷贝到自己");
+            return;
+        }
         if(!dest.exists()){
 //            如果文件夹不存在，创建文件夹
             dest.mkdir();
