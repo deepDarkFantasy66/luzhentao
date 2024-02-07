@@ -4,9 +4,10 @@ import java.io.*;
 
 public class BufferDemo {
     public static void main(String[] args) {
+//        创建文件输入流和输出流
         long l = System.currentTimeMillis();
-        try ( BufferedInputStream bis = new BufferedInputStream(new FileInputStream("C:\\Users\\jhon\\OneDrive\\桌面\\简历以及照片\\年度总结.pdf"));
-              BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("D:\\年度总结.pdf"))){
+        try ( BufferedInputStream bis = new BufferedInputStream(new FileInputStream("C:\\Users\\jhon\\OneDrive\\桌面\\房屋建筑物.doc"));
+              BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("D:\\房屋建筑物.doc"))){
             byte[] bytes = new byte[1024];
             int len;
             while ((len = bis.read(bytes)) != -1) {
