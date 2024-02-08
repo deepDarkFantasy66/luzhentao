@@ -3,20 +3,18 @@ package com.example.Thread;
 import com.example.utils.SpringLogger;
 
 public class ThreadTest {
-    public static void main(String[] args) {
-        MyThread mt1 = new MyThread();
+    public static void main(String[] args) throws InterruptedException {
+        MyThread mt1 = new MyThread("线程A");
         mt1.start();
-        for (int i = 0; i < 5; i++) {
-            SpringLogger.logger.info(Thread.currentThread().getName() + "运行，i = " + i);
-        }
+        mt1.join();
+        MyThread mt2 = new MyThread("线程B");
+        mt2.start();
+        mt2.join();
+//        获取主线程的名字
+//        哪个线程在执行他，就是哪个线程的名字
+        Thread thread = Thread.currentThread();
+        SpringLogger.logger.debug("主线程的名字：" + thread.getName());
+
     }
 }
 
-class MyThread extends Thread {
-    @Override
-    public void run() {
-        for (int i = 0; i < 5; i++) {
-            SpringLogger.logger.info(Thread.currentThread().getName() + "运行，i = " + i);
-        }
-    }
-}
