@@ -3,7 +3,6 @@ package com.example.Thread;
 import com.example.utils.SpringLogger;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 public class CallableTest {
@@ -13,7 +12,6 @@ public class CallableTest {
         new Thread(futureTask).start();
         String s = futureTask.get();
         SpringLogger.logger.info(s);
-
     }
 }
 
