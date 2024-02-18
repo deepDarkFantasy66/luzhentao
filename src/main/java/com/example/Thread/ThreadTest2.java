@@ -1,5 +1,7 @@
 package com.example.Thread;
 
+import java.util.concurrent.ThreadPoolExecutor;
+
 public class ThreadTest2 {
     public static void main(String[] args) {
 //        创建一个账户对象
@@ -13,5 +15,4 @@ public class ThreadTest2 {
         new DrawMoneyRunnable(account1,"小黑").start();
         new DrawMoneyRunnable(account1,"小白").start();
     }
-
 }

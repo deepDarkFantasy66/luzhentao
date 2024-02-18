@@ -15,10 +15,11 @@ public class MyCallable implements Callable<String> {
 
     @Override
     public String call() throws Exception {
+        Thread thread = Thread.currentThread();
         int sum = 0;
         for (int j = 0; j <= i; j++) {
             sum += j;
         }
-        return "线程求出的和为"+sum;
+        return thread.getName()+"线程求出的和为"+sum;
     }
 }
