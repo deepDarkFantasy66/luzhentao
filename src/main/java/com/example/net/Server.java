@@ -1,5 +1,7 @@
 package com.example.net;
 
+import com.example.utils.SpringLogger;
+
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
@@ -14,9 +16,9 @@ public class Server {
         socket.receive(packet);
         int length = packet.getLength();
         String rs = new String(packet.getData(),0,length);
-        System.out.println(rs);
-        System.out.println(packet.getAddress().getHostAddress());
-        System.out.println(packet.getPort());
+        SpringLogger.logger.info("接收到的数据是：" + rs);
+        SpringLogger.logger.info("客户端的ip地址是："+packet.getAddress().getHostAddress());
+        SpringLogger.logger.info("客户端的端口号是："+packet.getPort());
 //        释放资源
         socket.close();
 
