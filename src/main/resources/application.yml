@@ -1,13 +1,21 @@
 product:
   name: Demo
   author: C3Stones
-server:
-  port: 18888
 
-logging:
-  config: classpath:logback-spring.xml
+
 # application.yml
 spring:
-  devtools:
-    restart:
-      enabled: true
+  profiles:
+    active: dev
+
+#    集成mybaitsPlus
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml  # 指定 mapper XML 文件的位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  # 指定 MyBatis 应该使用的日志实现
+  db-config:
+    id-type: auto  # 主键类型
+    field-strategy: not_empty  # 字段策略，not_empty 表示只要字段不为 null，MyBatis-Plus 就会使用它
+    refresh-mapper: true  # 是否刷新 mapper
+    logic-delete-value: 1  # 逻辑删除字段的值（已删除）
+    logic-not-delete-value: 0  # 逻辑未删除字段的值（未删除）

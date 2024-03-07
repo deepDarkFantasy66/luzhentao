@@ -1,0 +1,13 @@
+#      配置数据库连接
+spring:
+    datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://118.178.93.218:13306/luzhentao?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: Lz199605!
+
+server:
+  port: 18888
+
+  logging:
+    config: classpath:logback-spring.xml
