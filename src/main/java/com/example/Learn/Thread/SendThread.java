@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Thread;
+package com.example.Learn.Thread;
 
 import java.util.List;
 import java.util.Random;

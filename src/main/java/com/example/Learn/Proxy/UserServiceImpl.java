@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Proxy;
+package com.example.Learn.Proxy;
 
 public class UserServiceImpl implements UserService{
     @Override

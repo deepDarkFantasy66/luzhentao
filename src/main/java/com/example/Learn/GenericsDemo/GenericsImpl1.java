@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.GenericsDemo;
+package com.example.Learn.GenericsDemo;
 
 public class GenericsImpl1<E> implements GenericsInterface<E>{
     /**

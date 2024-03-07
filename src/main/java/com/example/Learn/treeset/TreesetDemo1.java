@@ -1,7 +1,7 @@
-package com.example.Learn.HashSet.treeset;
+package com.example.Learn.treeset;
 
-import com.example.Learn.HashSet.demo.Student;
-import com.example.Learn.HashSet.demo.StudentException;
+import com.example.Learn.demo.Student;
+import com.example.Learn.demo.StudentException;
 
 import java.util.Comparator;
 import java.util.TreeSet;

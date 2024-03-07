@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Map;
+package com.example.Learn.Map;
 
 import java.util.TreeMap;
 

@@ -1,7 +1,9 @@
-package com.example.Learn.HashSet.Collections;
+package com.example.Learn.Collections;
 
-import com.example.Learn.HashSet.demo.Student;
-import com.example.Learn.HashSet.demo.StudentException;
+
+
+import com.example.Learn.demo.Student;
+import com.example.Learn.demo.StudentException;
 
 import java.util.ArrayList;
 import java.util.Collections;

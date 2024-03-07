@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.treeset;
+package com.example.Learn.treeset;
 
 import java.util.Comparator;
 import java.util.TreeSet;

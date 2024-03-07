@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.demo;
+package com.example.Learn.demo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

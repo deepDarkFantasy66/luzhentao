@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Proxy;
+package com.example.Learn.Proxy;
 
 public interface UserService {
    void login(String username, String password) throws InterruptedException;

@@ -1,7 +1,7 @@
 package com.example.Learn.HashSet;
 
-import com.example.Learn.HashSet.demo.Student;
-import com.example.Learn.HashSet.demo.StudentException;
+import com.example.Learn.demo.Student;
+import com.example.Learn.demo.StudentException;
 
 import java.util.HashSet;
 

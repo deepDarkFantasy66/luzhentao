@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.demo;
+package com.example.Learn.demo;
 
 public class forTest {
     public static void main(String[] args) {

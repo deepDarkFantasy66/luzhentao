@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.demo;
+package com.example.Learn.demo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;

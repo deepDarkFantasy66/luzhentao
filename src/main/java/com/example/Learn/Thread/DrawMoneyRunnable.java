@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Thread;
+package com.example.Learn.Thread;
 
 public class DrawMoneyRunnable extends Thread {
     private Account account;

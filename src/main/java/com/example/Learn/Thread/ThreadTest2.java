@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Thread;
+package com.example.Learn.Thread;
 
 public class ThreadTest2 {
     public static void main(String[] args) {

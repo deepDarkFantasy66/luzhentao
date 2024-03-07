@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.demo;
+package com.example.Learn.demo;
 
 public class StudentException extends Exception {
     public StudentException() {

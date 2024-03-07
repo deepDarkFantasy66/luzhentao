@@ -1,4 +1,4 @@
-package com.example.Learn.HashSet.Proxy;
+package com.example.Learn.Proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
