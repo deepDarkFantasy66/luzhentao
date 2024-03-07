@@ -66,6 +66,12 @@
 			<artifactId>cglib</artifactId>
 			<version>3.3.0</version>
 		</dependency>
+			<!-- 其他依赖... -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+				<optional>true</optional>
+			</dependency>
     </dependencies>
 	<build>
 		<plugins>

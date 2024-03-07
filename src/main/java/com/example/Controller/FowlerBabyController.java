@@ -13,5 +13,9 @@ public class FowlerBabyController {
         SpringLogger.logger.info(flowerBaby.toString());
         return flowerBaby.toString();
     }
-
+    @RequestMapping("/flowerbaby1")
+    public String flowerbaby1(@RequestBody FlowerBaby flowerBaby) {
+        SpringLogger.logger.info(flowerBaby.toString());
+        return flowerBaby.toString();
+    }
 }

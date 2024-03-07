@@ -6,3 +6,8 @@ server:
 
 logging:
   config: classpath:logback-spring.xml
+# application.yml
+spring:
+  devtools:
+    restart:
+      enabled: true
