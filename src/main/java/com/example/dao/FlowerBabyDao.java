@@ -5,6 +5,6 @@ import com.example.bean.FlowerBaby;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface FlowerBabyDao extends BaseMapper<FlowerBaby> {
+public interface FlowerBabyDao  {
     void saveFlowerBaby(FlowerBaby flowerBaby);
 }
