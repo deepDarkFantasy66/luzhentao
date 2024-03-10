@@ -5,4 +5,7 @@
     <insert id="saveFlowerBaby" parameterType="com.example.bean.FlowerBaby">
         insert into demo values (#{name},#{age})
     </insert>
+    <insert id="saveAction" parameterType="com.example.bean.Action">
+        insert into action values (#{time},#{action})
+    </insert>
 </mapper>
