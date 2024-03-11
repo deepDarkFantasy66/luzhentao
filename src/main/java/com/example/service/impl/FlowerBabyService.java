@@ -33,6 +33,16 @@ public class FlowerBabyService implements IFlowerBabyService{
         if (action.isMommy()) {
             sb.append("嘘嘘");
         }
+        if (action.isProbiotics()) {
+            sb.append("加益生菌");
+        }
+        if (action.isIronSupplement()) {
+            sb.append("加铁剂");
+        }
+        if (action.isEuthyrox()){
+            sb.append("喂优甲乐");
+        }
+
         action.setAction(sb.toString());
         return flowerBabyDao.saveAction(action);
     }

@@ -12,6 +12,10 @@ public class Action {
     private Integer feedingMethod;
     private String quantity;
     private String daddyQuantity;
+    private boolean probiotics;
+    private boolean ironSupplement;
+    private boolean euthyrox;
+
 
     public Action(String time, String action, boolean daddy, boolean mommy, Integer feedingMethod, String quantity, String daddyQuantity) {
         this.time = time;
