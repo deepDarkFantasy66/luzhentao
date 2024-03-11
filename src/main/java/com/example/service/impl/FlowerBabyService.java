@@ -42,7 +42,12 @@ public class FlowerBabyService implements IFlowerBabyService{
         if (action.isEuthyrox()){
             sb.append("喂优甲乐");
         }
-
+        if (action.isVitaminAD()){
+            sb.append("喂维生素AD");
+        }
+        if (action.isVitaminD3()){
+            sb.append("喂维生素D3");
+        }
         action.setAction(sb.toString());
         return flowerBabyDao.saveAction(action);
     }

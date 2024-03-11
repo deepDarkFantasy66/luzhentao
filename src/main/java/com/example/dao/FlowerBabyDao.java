@@ -22,6 +22,6 @@ public interface FlowerBabyDao extends BaseMapper<FlowerBaby> {
     @Delete("DELETE FROM action WHERE id = #{id}")
     int deleteAction(Integer id);
 
-    @Select("SELECT * FROM action order by create_time desc limit 30")
+    @Select("SELECT * FROM action order by create_time desc limit 100")
     List<Action> getActionList();
 }

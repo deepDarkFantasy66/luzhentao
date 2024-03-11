@@ -15,6 +15,8 @@ public class Action {
     private boolean probiotics;
     private boolean ironSupplement;
     private boolean euthyrox;
+    private boolean vitaminAD;
+    private boolean vitaminD3;
 
 
     public Action(String time, String action, boolean daddy, boolean mommy, Integer feedingMethod, String quantity, String daddyQuantity) {
