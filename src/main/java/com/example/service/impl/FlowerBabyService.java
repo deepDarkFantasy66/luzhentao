@@ -21,6 +21,19 @@ public class FlowerBabyService implements IFlowerBabyService{
 
     @Override
     public int saveAction(Action action) {
+        StringBuilder sb = new StringBuilder();
+        if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 1) {
+            sb.append("母乳瓶喂").append(action.getQuantity()).append("ml");
+        }else if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 2) {
+            sb.append("母乳亲喂");
+        }
+        if(action.isDaddy()){
+            sb.append("拉粑粑").append(action.getDaddyQuantity());
+        }
+        if (action.isMommy()) {
+            sb.append("嘘嘘");
+        }
+        action.setAction(sb.toString());
         return flowerBabyDao.saveAction(action);
     }
 

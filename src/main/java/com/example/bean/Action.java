@@ -2,16 +2,25 @@ package com.example.bean;
 
 import lombok.Data;
 
-import java.sql.Date;
 @Data
 public class Action {
     private Integer id;
-    private Date time;
+    private String time;
     private String action;
+    private boolean daddy;
+    private boolean mommy;
+    private Integer feedingMethod;
+    private String quantity;
+    private String daddyQuantity;
 
-    public Action(Date time, String action) {
+    public Action(String time, String action, boolean daddy, boolean mommy, Integer feedingMethod, String quantity, String daddyQuantity) {
         this.time = time;
         this.action = action;
+        this.daddy = daddy;
+        this.mommy = mommy;
+        this.feedingMethod = feedingMethod;
+        this.quantity = quantity;
+        this.daddyQuantity = daddyQuantity;
     }
 
     public Action() {
