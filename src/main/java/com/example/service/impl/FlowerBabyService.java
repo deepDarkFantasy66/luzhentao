@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -17,13 +18,20 @@ public class FlowerBabyService implements IFlowerBabyService{
 
     @Override
     public int saveAction(Action action) {
+        doAction(action);
+        int i = flowerBabyDao.saveAction(action);
+        SpringLogger.logger.info("saveAction:"+i);
+        return i;
+    }
+
+    private static void doAction(Action action) {
         StringBuilder sb = new StringBuilder();
-        if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 1) {
+        if (null!= action.getFeedingMethod()&& action.getFeedingMethod() == 1) {
             sb.append("母乳瓶喂").append(action.getQuantity()).append("ml");
-        }else if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 2) {
+        }else if (null!= action.getFeedingMethod()&& action.getFeedingMethod() == 2) {
             sb.append("母乳亲喂");
         }
-        else if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 3) {
+        else if (null!= action.getFeedingMethod()&& action.getFeedingMethod() == 3) {
             sb.append("吸奶").append(action.getQuantity()).append("ml");
         }
         if(action.isDaddy()){
@@ -48,9 +56,6 @@ public class FlowerBabyService implements IFlowerBabyService{
             sb.append("喂维生素D3");
         }
         action.setAction(sb.toString());
-        int i = flowerBabyDao.saveAction(action);
-        SpringLogger.logger.info("saveAction:"+i);
-        return i;
     }
 
     @Override
@@ -59,7 +64,21 @@ public class FlowerBabyService implements IFlowerBabyService{
     }
 
     @Override
-    public List<Action> getActionList(Action action) {
-        return flowerBabyDao.getActionList();
+    public List<Action> getActionList(Map params) {
+        Integer page = Integer.valueOf(params.get("page").toString());
+        Integer pageSize = Integer.valueOf(params.get("pageSize").toString());
+        params.put("start",(page-1)*pageSize);
+        return flowerBabyDao.getActionList(params);
+    }
+
+    @Override
+    public int updateAction(Action action) {
+        doAction(action);
+        return flowerBabyDao.updateAction(action);
+    }
+
+    @Override
+    public Integer getActionListCount(Map params) {
+        return flowerBabyDao.getActionListCount(params);
     }
 }

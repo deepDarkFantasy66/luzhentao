@@ -11,6 +11,7 @@ public class Action {
     private Integer id;
     private String time;
     private String action;
+    private boolean feeding;
     private boolean daddy;
     private boolean mommy;
     private Integer feedingMethod;
