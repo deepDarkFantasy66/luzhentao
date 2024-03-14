@@ -1,6 +1,7 @@
 package com.example.learn.Thread;
 
-import com.example.learn.HashSet.utils.SpringLogger;
+
+import com.example.learn.utils.SpringLogger;
 
 public class ThreadTest {
     public static void main(String[] args) throws InterruptedException {

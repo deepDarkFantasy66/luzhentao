@@ -1,8 +1,8 @@
 package com.example.learn.treeset;
 
 import com.example.learn.demo.Student;
-import com.example.learn.HashSet.utils.SpringLogger;
 import com.example.learn.demo.StudentException;
+import com.example.learn.utils.SpringLogger;
 
 import java.util.TreeSet;
 

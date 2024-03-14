@@ -1,8 +1,12 @@
 package com.example.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Action {
     private Integer id;
     private String time;
@@ -19,16 +23,5 @@ public class Action {
     private boolean vitaminD3;
 
 
-    public Action(String time, String action, boolean daddy, boolean mommy, Integer feedingMethod, String quantity, String daddyQuantity) {
-        this.time = time;
-        this.action = action;
-        this.daddy = daddy;
-        this.mommy = mommy;
-        this.feedingMethod = feedingMethod;
-        this.quantity = quantity;
-        this.daddyQuantity = daddyQuantity;
-    }
 
-    public Action() {
-    }
 }

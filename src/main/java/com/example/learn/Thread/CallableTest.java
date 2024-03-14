@@ -1,6 +1,7 @@
 package com.example.learn.Thread;
 
-import com.example.learn.HashSet.utils.SpringLogger;
+
+import com.example.learn.utils.SpringLogger;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;

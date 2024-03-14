@@ -2,7 +2,7 @@ package com.example.controller;
 
 import com.example.bean.Action;
 import com.example.bean.FlowerBaby;
-import com.example.learn.HashSet.utils.SpringLogger;
+import com.example.learn.utils.SpringLogger;
 import com.example.service.IFlowerBabyService;
 import com.example.utils.Results;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +25,7 @@ public class FowlerBabyController {
 
     @RequestMapping("/flowerbaby1")
     public String flowerbaby1(@RequestBody FlowerBaby flowerBaby) {
-        flowerBabyService.saveFlowerBaby(flowerBaby);
+//        flowerBabyService.saveFlowerBaby(flowerBaby);
         return flowerBaby.toString();
     }
 

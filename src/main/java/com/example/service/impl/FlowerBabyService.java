@@ -1,8 +1,8 @@
 package com.example.service.impl;
 
 import com.example.bean.Action;
-import com.example.bean.FlowerBaby;
 import com.example.dao.FlowerBabyDao;
+import com.example.learn.utils.SpringLogger;
 import com.example.service.IFlowerBabyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,10 +14,6 @@ import java.util.List;
 public class FlowerBabyService implements IFlowerBabyService{
    @Autowired
     private FlowerBabyDao flowerBabyDao;
-    @Override
-    public void saveFlowerBaby(FlowerBaby flowerBaby) {
-        flowerBabyDao.saveFlowerBaby(flowerBaby);
-    }
 
     @Override
     public int saveAction(Action action) {
@@ -52,7 +48,9 @@ public class FlowerBabyService implements IFlowerBabyService{
             sb.append("喂维生素D3");
         }
         action.setAction(sb.toString());
-        return flowerBabyDao.saveAction(action);
+        int i = flowerBabyDao.saveAction(action);
+        SpringLogger.logger.info("saveAction:"+i);
+        return i;
     }
 
     @Override
