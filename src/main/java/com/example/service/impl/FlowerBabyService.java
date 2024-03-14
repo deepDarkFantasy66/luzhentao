@@ -27,6 +27,9 @@ public class FlowerBabyService implements IFlowerBabyService{
         }else if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 2) {
             sb.append("母乳亲喂");
         }
+        else if (null!=action.getFeedingMethod()&&action.getFeedingMethod() == 3) {
+            sb.append("吸奶").append(action.getQuantity()).append("ml");
+        }
         if(action.isDaddy()){
             sb.append("拉粑粑").append(action.getDaddyQuantity());
         }
