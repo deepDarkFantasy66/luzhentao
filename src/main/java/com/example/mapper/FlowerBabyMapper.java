@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.example.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.bean.Action;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface FlowerBabyDao extends BaseMapper<FlowerBaby> {
+public interface FlowerBabyMapper extends BaseMapper<FlowerBaby> {
 
 
     @Options(useGeneratedKeys = true, keyProperty = "id")
@@ -32,7 +32,7 @@ public interface FlowerBabyDao extends BaseMapper<FlowerBaby> {
     })
     List<Action> getActionList(Map params);
 
-    @Update("update action set time = #{time}, action = #{action}, feeding = #{feeding}, daddy = #{daddy}, mommy = #{mommy}, feeding_method = #{feedingMethod}, quantity = #{quantity}, daddy_quantity = #{daddyQuantity}, probiotics = #{probiotics}, iron_supplement = #{ironSupplement}, euthyrox = #{euthyrox}, vitamianAD = #{vitaminAD}, vitaminD3 = #{vitaminD3} WHERE id = #{id}")
+//    @Update("update action set time = #{time}, action = #{action}, feeding = #{feeding}, daddy = #{daddy}, mommy = #{mommy}, feeding_method = #{feedingMethod}, quantity = #{quantity}, daddy_quantity = #{daddyQuantity}, probiotics = #{probiotics}, iron_supplement = #{ironSupplement}, euthyrox = #{euthyrox}, vitamianAD = #{vitaminAD}, vitaminD3 = #{vitaminD3} WHERE id = #{id}")
     int updateAction(Action action);
 
     @Select("SELECT count(1) FROM action where status = 0")

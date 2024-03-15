@@ -1,7 +1,7 @@
 package com.example.service.impl;
 
 import com.example.bean.Action;
-import com.example.dao.FlowerBabyDao;
+import com.example.mapper.FlowerBabyMapper;
 import com.example.learn.utils.SpringLogger;
 import com.example.service.IFlowerBabyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +14,12 @@ import java.util.Map;
 @Service
 public class FlowerBabyService implements IFlowerBabyService{
    @Autowired
-    private FlowerBabyDao flowerBabyDao;
+    private FlowerBabyMapper flowerBabyMapper;
 
     @Override
     public int saveAction(Action action) {
         doAction(action);
-        int i = flowerBabyDao.saveAction(action);
+        int i = flowerBabyMapper.saveAction(action);
         SpringLogger.logger.info("saveAction:"+i);
         return i;
     }
@@ -60,7 +60,7 @@ public class FlowerBabyService implements IFlowerBabyService{
 
     @Override
     public int deleteAction(Integer id) {
-        return flowerBabyDao.deleteAction(id);
+        return flowerBabyMapper.deleteAction(id);
     }
 
     @Override
@@ -68,17 +68,17 @@ public class FlowerBabyService implements IFlowerBabyService{
         Integer page = Integer.valueOf(params.get("page").toString());
         Integer pageSize = Integer.valueOf(params.get("pageSize").toString());
         params.put("start",(page-1)*pageSize);
-        return flowerBabyDao.getActionList(params);
+        return flowerBabyMapper.getActionList(params);
     }
 
     @Override
     public int updateAction(Action action) {
         doAction(action);
-        return flowerBabyDao.updateAction(action);
+        return flowerBabyMapper.updateAction(action);
     }
 
     @Override
     public Integer getActionListCount(Map params) {
-        return flowerBabyDao.getActionListCount(params);
+        return flowerBabyMapper.getActionListCount(params);
     }
 }

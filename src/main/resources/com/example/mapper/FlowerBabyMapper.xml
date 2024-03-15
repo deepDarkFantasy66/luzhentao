@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.FlowerBabyMapper">
+
+    <update id="updateAction" parameterType="com.example.bean.FlowerBaby">
+        update action
+        <set>
+            <if test="time !=null and time !=''">time = #{time},</if>
+            <if test="action !=null and action !=''">action = #{action},</if>
+            <if test="feeding !=null and feeding !=''">feeding = #{feeding},</if>
+            <if test="daddy !=null and daddy !=''">daddy = #{daddy},</if>
+            <if test="mommy !=null and mommy !=''">mommy = #{mommy},</if>
+            <if test="feedingMethod !=null and feedingMethod !=''">feeding_method = #{feedingMethod},</if>
+            <if test="quantity !=null and quantity !=''">quantity = #{quantity},</if>
+            <if test="daddyQuantity !=null and daddyQuantity !=''">daddy_quantity = #{daddyQuantity},</if>
+            <if test="probiotics !=null and probiotics !=''">probiotics = #{probiotics},</if>
+            <if test="ironSupplement !=null and ironSupplement !=''">iron_supplement = #{ironSupplement},</if>
+            <if test="euthyrox !=null and euthyrox !=''">euthyrox = #{euthyrox},</if>
+            <if test="vitaminAD !=null and vitaminAD !=''">vitamianAD = #{vitaminAD},</if>
+            <if test="vitaminD3 !=null and vitaminD3 !=''">vitaminD3 = #{vitaminD3}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+</mapper>
