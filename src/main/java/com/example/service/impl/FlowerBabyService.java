@@ -1,11 +1,13 @@
 package com.example.service.impl;
 
 import com.example.bean.Action;
-import com.example.mapper.FlowerBabyMapper;
 import com.example.learn.utils.SpringLogger;
+import com.example.mapper.FlowerBabyMapper;
 import com.example.service.IFlowerBabyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
@@ -57,7 +59,7 @@ public class FlowerBabyService implements IFlowerBabyService{
         }
         action.setAction(sb.toString());
     }
-
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     @Override
     public int deleteAction(Integer id) {
         return flowerBabyMapper.deleteAction(id);
