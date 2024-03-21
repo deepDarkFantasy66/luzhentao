@@ -1,5 +1,6 @@
 package com.example.service.impl;
 
+import com.example.anno.Log;
 import com.example.bean.Action;
 import com.example.learn.utils.SpringLogger;
 import com.example.mapper.FlowerBabyMapper;
@@ -64,7 +65,7 @@ public class FlowerBabyService implements IFlowerBabyService{
     public int deleteAction(Integer id) {
         return flowerBabyMapper.deleteAction(id);
     }
-
+    @Log
     @Override
     public List<Action> getActionList(Map params) {
         Integer page = Integer.valueOf(params.get("page").toString());
