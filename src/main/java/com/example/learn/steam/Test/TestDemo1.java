@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.steam.Test;
+package com.example.learn.steam.Test;
 
 import java.io.FileReader;
 import java.io.IOException;

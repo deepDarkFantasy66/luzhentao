@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.Map;
+package com.example.learn.Map;
 
 import java.util.*;
 

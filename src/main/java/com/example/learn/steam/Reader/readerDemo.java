@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.steam.Reader;
+package com.example.learn.steam.Reader;
 
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -27,7 +27,7 @@ public class readerDemo {
         try (FileInputStream fis = new FileInputStream("D:\\test.txt")){
             byte[] bytes = new byte[3];
             int len;
-            while ((len = fis.read(bytes)) != -1) {
+            while  ((len = fis.read(bytes)) != -1) {
                 System.out.print(new String(bytes, 0, len));
 
             }

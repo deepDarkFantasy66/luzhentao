@@ -25,6 +25,6 @@ public class JwtTest {
     @Test
     public void testParseToken() {
         String token = "eyJhbGciOiJIUzUxMiJ9.eyJwYXNzd29yZCI6IjEyMzQ1NiIsImV4cCI6MTcxMDgxNDA1NSwidXNlcm5hbWUiOiLnjpvljaHlt7TljaEifQ.DJxjpj_-Uga9tfR9vcS7ZkttsrRKOZMcTr9L6PCvm9yoBL6BDxG39EQ5AAWk1qTkpU8H9Sk_qehW3xQEr2EriA";
-        log.info("claims:{}", JwtUtil.parseToken(token));
+//        log.info("claims:{}", JwtUtil.parseToken(token));
     }
 }

@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.steam.outputStream;
+package com.example.learn.steam.outputStream;
 
 import java.io.File;
 import java.io.FileOutputStream;
