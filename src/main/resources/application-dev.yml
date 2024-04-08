@@ -5,6 +5,11 @@ spring:
     username: root
     password: Lz199605!
 
+  redis:
+    host: 118.178.93.218
+    port: 16379
+    password: Lz199605!
+
 server:
   port: 18888
 
