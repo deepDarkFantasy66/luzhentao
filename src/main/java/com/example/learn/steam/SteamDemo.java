@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.steam;
+package com.example.learn.steam;
 
 import java.util.ArrayList;
 import java.util.Map;

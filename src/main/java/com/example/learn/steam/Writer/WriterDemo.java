@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.steam.Writer;
+package com.example.learn.steam.Writer;
 
 import java.io.FileWriter;
 import java.io.IOException;

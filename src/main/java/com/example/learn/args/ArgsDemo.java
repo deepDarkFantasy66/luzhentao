@@ -1,4 +1,4 @@
-package com.example.learn.HashSet.args;
+package com.example.learn.args;
 
 public class ArgsDemo {
     public static void main(String[] args){
